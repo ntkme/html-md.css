@@ -1,0 +1,264 @@
+/*! markdown.css 1.0.0 | BSD License | github.com/ntkme/markdown.css */
+@media all {
+  .markdown {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    font-family: Cousine, monospace;
+    line-height: 1.61803398874989485em;
+  }
+  .markdown p,
+  .markdown h1,
+  .markdown h2,
+  .markdown h3,
+  .markdown h4,
+  .markdown h5,
+  .markdown h6,
+  .markdown blockquote,
+  .markdown ul,
+  .markdown ol,
+  .markdown li,
+  .markdown pre,
+  .markdown code {
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  .markdown h1::before,
+  .markdown h2::before,
+  .markdown h3::before,
+  .markdown h4::before,
+  .markdown h5::before,
+  .markdown h6::before,
+  .markdown blockquote::before,
+  .markdown ul::before,
+  .markdown ol::before,
+  .markdown li::before,
+  .markdown h1::after,
+  .markdown h2::after,
+  .markdown h3::after,
+  .markdown h4::after,
+  .markdown h5::after,
+  .markdown h6::after,
+  .markdown blockquote::after,
+  .markdown ul::after,
+  .markdown ol::after,
+  .markdown li::after {
+    white-space: nowrap;
+  }
+  .markdown p,
+  .markdown h1,
+  .markdown h2,
+  .markdown h3,
+  .markdown h4,
+  .markdown h5,
+  .markdown h6,
+  .markdown blockquote,
+  .markdown ul,
+  .markdown ol,
+  .markdown pre,
+  .markdown hr,
+  .markdown img,
+  .markdown video {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  .markdown li > ol,
+  .markdown li > ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .markdown h1::before {
+    content: "#\0000a0";
+  }
+  .markdown h2::before {
+    content: "##\0000a0";
+  }
+  .markdown h3::before {
+    content: "###\0000a0";
+  }
+  .markdown h4::before {
+    content: "####\0000a0";
+  }
+  .markdown h5::before {
+    content: "#####\0000a0";
+  }
+  .markdown h6::before {
+    content: "######\0000a0";
+  }
+  .markdown blockquote {
+    margin-left: 1.2em;
+    margin-left: 2ch;
+    position: relative;
+  }
+  .markdown blockquote::before {
+    content: ">\0000a0";
+    position: absolute;
+    right: 100%;
+  }
+  .markdown ul,
+  .markdown ol {
+    list-style-type: none;
+    position: relative;
+  }
+  .markdown ul > li::before,
+  .markdown ol > li::before {
+    position: absolute;
+    left: 0;
+  }
+  .markdown ul.bulleted > li::before {
+    content: "*\0000a0";
+  }
+  .markdown ul.dashed > li::before,
+  .markdown ul > li::before {
+    content: "\002013\0000a0";
+  }
+  .markdown ul > li {
+    margin-left: 1.2em;
+    margin-left: 2ch;
+  }
+  .markdown ol {
+    counter-reset: ol-li;
+  }
+  .markdown ol > li::before {
+    counter-increment: ol-li;
+    content: counter(ol-li) ".\0000a0";
+  }
+  .markdown ol > li {
+    margin-left: 1.7999999999999998em;
+    margin-left: 3ch;
+  }
+  .markdown pre {
+    line-height: normal;
+    margin-left: 2.4em;
+    margin-right: 2.4em;
+    margin-left: 4ch;
+    margin-right: 4ch;
+  }
+  .markdown hr {
+    border: 0;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #ffffff;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    clear: both;
+    height: 0;
+  }
+  .markdown a {
+    text-decoration: none;
+    border-bottom: 1px dashed;
+  }
+  .markdown em,
+  .markdown del {
+    position: relative;
+    margin-left: 0.6em;
+    margin-right: 0.6em;
+    margin-left: 1ch;
+    margin-right: 1ch;
+  }
+  .markdown em::before,
+  .markdown del::before,
+  .markdown em::after,
+  .markdown del::after {
+    position: absolute;
+  }
+  .markdown em::before,
+  .markdown del::before {
+    right: 100%;
+  }
+  .markdown em {
+    font-style: normal;
+    border-bottom: 1px solid;
+  }
+  .markdown em::before,
+  .markdown em::after {
+    content: "_";
+  }
+  .markdown del::before,
+  .markdown del::after {
+    content: "-";
+  }
+  .markdown strong {
+    font-weight: bold;
+  }
+  .markdown strong::before,
+  .markdown strong::after {
+    content: "**";
+  }
+  .markdown code {
+    word-wrap: break-word;
+  }
+  .markdown code::before,
+  .markdown code::after {
+    content: "`";
+  }
+  .markdown pre code::before,
+  .markdown pre code::after {
+    content: "";
+  }
+  .markdown img,
+  .markdown video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-height: 35.625em), not screen {
+  .markdown {
+    line-height: 2em;
+  }
+}
+@media screen and (min-width: 62em), not screen {
+  .markdown {
+    padding: 0 4.8em;
+    padding: 0 8ch;
+  }
+  .markdown > h1,
+  .markdown > h2,
+  .markdown > h3,
+  .markdown > h4,
+  .markdown > h5,
+  .markdown > h6,
+  .markdown ul > li,
+  .markdown ol > li {
+    position: relative;
+  }
+  .markdown > h1::before,
+  .markdown > h2::before,
+  .markdown > h3::before,
+  .markdown > h4::before,
+  .markdown > h5::before,
+  .markdown > h6::before,
+  .markdown ul > li::before,
+  .markdown ol > li::before {
+    position: absolute;
+    left: auto;
+    right: 100%;
+  }
+  .markdown > ul > li,
+  .markdown > ol > li {
+    margin-left: 0;
+  }
+}
+@media print {
+  .markdown a {
+    border: none;
+  }
+  .markdown a[href]::before {
+    content: "[";
+  }
+  .markdown a[href]::after {
+    content: "](" attr(href) ")";
+  }
+  .markdown a[href^="data:"]::before,
+  .markdown a[href^="javascript:"]::before,
+  .markdown a[href^="#"]::before,
+  .markdown a[href^="data:"]::after,
+  .markdown a[href^="javascript:"]::after,
+  .markdown a[href^="#"]::after {
+    content: "";
+  }
+}

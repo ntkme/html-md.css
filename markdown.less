@@ -1,0 +1,287 @@
+/*! markdown.css 1.0.0 | BSD License | github.com/ntkme/markdown.css */
+@markdown-ch-fallback: unit((3 / 5), em);
+@media all {
+  @ch: @markdown-ch-fallback;
+
+  .markdown {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    font-family: Cousine, monospace;
+    line-height: 1.61803398874989485em;
+
+    p,
+    h1, h2, h3, h4, h5, h6,
+    blockquote,
+    ul, ol, li,
+    pre, code {
+      font-size: 100%;
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+
+    h1, h2, h3, h4, h5, h6,
+    blockquote,
+    ul, ol, li {
+      &::before, &::after {
+        white-space: nowrap;
+      }
+    }
+
+    p,
+    h1, h2, h3, h4, h5, h6,
+    blockquote,
+    ul, ol,
+    pre,
+    hr,
+    img, video {
+      margin-top: 1em;
+      margin-bottom: 1em;
+    }
+
+    li > ol, li > ul {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+  // Paragraphs
+
+  // Headers
+
+    h1::before {
+      content: "#\0000a0";
+    }
+
+    h2::before {
+      content: "##\0000a0";
+    }
+
+    h3::before {
+      content: "###\0000a0";
+    }
+
+    h4::before {
+      content: "####\0000a0";
+    }
+
+    h5::before {
+      content: "#####\0000a0";
+    }
+
+    h6::before {
+      content: "######\0000a0";
+    }
+
+  // Blockquotes
+
+    blockquote {
+      margin-left: (2 * @ch);
+      margin-left: 2ch;
+      position: relative;
+
+      &::before {
+        content: ">\0000a0";
+        position: absolute;
+        right: 100%;
+      }
+    }
+
+  // Lists
+
+    ul, ol {
+      list-style-type: none;
+      position: relative;
+
+      & > li::before {
+        position: absolute;
+        left: 0;
+      }
+    }
+
+    ul {
+      &.bulleted > li::before {
+        content: "*\0000a0";
+      }
+
+      &.dashed > li::before,
+      & > li::before {
+        content: "\002013\0000a0";
+      }
+
+      & > li {
+        margin-left: (2 * @ch);
+        margin-left: 2ch;
+      }
+    }
+
+    ol {
+      counter-reset: ol-li;
+
+      & > li::before {
+        counter-increment: ol-li;
+        content: counter(ol-li) ".\0000a0";
+      }
+
+      & > li {
+        margin-left: (3 * @ch);
+        margin-left: 3ch;
+      }
+    }
+
+  // Code Blocks
+
+    pre {
+      line-height: normal;
+      margin-left: (4 * @ch);
+      margin-right: (4 * @ch);
+      margin-left: 4ch;
+      margin-right: 4ch;
+    }
+
+  // Horizontal rules
+
+    hr {
+      border: 0;
+      border-top: 1px solid #000000;
+      border-bottom: 1px solid #ffffff;
+      border-top: 1px solid rgba(0,0,0,0.1);
+      border-bottom: 1px solid rgba(255,255,255,0.3);
+      clear: both;
+      height: 0;
+    }
+
+  // Links
+
+    a {
+      text-decoration: none;
+      border-bottom: 1px dashed;
+    }
+
+  // Emphasis
+
+    em, del {
+      position: relative;
+      margin-left: (1 * @ch);
+      margin-right: (1 * @ch);
+      margin-left: 1ch;
+      margin-right: 1ch;
+
+      &::before, &::after {
+        position: absolute;
+      }
+
+      &::before {
+        right: 100%;
+      }
+    }
+
+    em {
+      font-style: normal;
+      border-bottom: 1px solid;
+
+      &::before, &::after {
+        content: "_";
+      }
+    }
+
+    del {
+      &::before, &::after {
+        content: "-";
+      }
+    }
+
+    strong {
+      font-weight: bold;
+
+      &::before, &::after {
+        content: "**";
+      }
+    }
+
+  // Inline codes
+
+    code {
+      word-wrap: break-word;
+
+      &::before, &::after {
+        content: "`";
+      }
+    }
+
+    pre {
+      code {
+        &::before, &::after {
+          content: "";
+        }
+      }
+    }
+
+  // Image & Video
+
+    img, video {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+@media screen and (min-height: 35.625em), not screen {
+  .markdown {
+    line-height: 2em;
+  }
+}
+@media screen and (min-width: 62em), not screen {
+  @ch: @markdown-ch-fallback;
+
+  .markdown {
+    padding: 0 (8 * @ch);
+    padding: 0 8ch;
+
+    & > h1,
+    & > h2,
+    & > h3,
+    & > h4,
+    & > h5,
+    & > h6,
+    ul > li,
+    ol > li {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        left: auto;
+        right: 100%;
+      }
+    }
+
+    & > ul > li,
+    & > ol > li {
+      margin-left: 0;
+    }
+  }
+}
+@media print {
+  .markdown a {
+    border: none;
+
+    &[href] {
+      &::before {
+        content: "[";
+      }
+      &::after {
+        content: "](" attr(href) ")";
+      }
+    }
+
+    &[href^="data:"],
+    &[href^="javascript:"],
+    &[href^="#"] {
+      &::before, &::after {
+        content: "";
+      }
+    }
+  }
+}
