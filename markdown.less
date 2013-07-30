@@ -1,4 +1,4 @@
-/*! markdown.css 1.0.0 | BSD License | github.com/ntkme/markdown.css */
+/*! markdown.css 1.0.1 | BSD License | github.com/ntkme/markdown.css */
 @markdown-ch-fallback: unit((3 / 5), em);
 @media all {
   @ch: @markdown-ch-fallback;
@@ -18,13 +18,13 @@
       font-size: 100%;
       margin: 0;
       padding: 0;
-      border: 0;
+      border: none;
     }
 
     h1, h2, h3, h4, h5, h6,
     blockquote,
-    ul, ol, li {
-      &::before, &::after {
+    li {
+      &::before {
         white-space: nowrap;
       }
     }
@@ -76,14 +76,21 @@
   // Blockquotes
 
     blockquote {
-      margin-left: (2 * @ch);
-      margin-left: 2ch;
       position: relative;
+      left: (2 * @ch);
+      left: 2ch;
+      margin-right: (2 * @ch);
+      margin-right: 2ch;
 
       &::before {
         content: ">\0000a0";
         position: absolute;
         right: 100%;
+      }
+
+      &::after {
+        content: "";
+        content: none;
       }
     }
 
@@ -91,11 +98,14 @@
 
     ul, ol {
       list-style-type: none;
-      position: relative;
 
-      & > li::before {
-        position: absolute;
-        left: 0;
+      & > li {
+        position: relative;
+
+        &::before {
+          position: absolute;
+          right: 100%;
+        }
       }
     }
 
@@ -110,8 +120,10 @@
       }
 
       & > li {
-        margin-left: (2 * @ch);
-        margin-left: 2ch;
+        left: (2 * @ch);
+        left: 2ch;
+        margin-right: (2 * @ch);
+        margin-right: 2ch;
       }
     }
 
@@ -124,8 +136,25 @@
       }
 
       & > li {
-        margin-left: (3 * @ch);
-        margin-left: 3ch;
+        left: (3 * @ch);
+        left: 3ch;
+        margin-right: (3 * @ch);
+        margin-right: 3ch;
+
+        &:nth-child(n+10) {
+          margin-left: (1 * @ch);
+          margin-left: 1ch;
+        }
+
+        &:nth-child(n+100) {
+          margin-left: (2 * @ch);
+          margin-left: 2ch;
+        }
+
+        &:nth-child(n+1000) {
+          margin-left: (3 * @ch);
+          margin-left: 3ch;
+        }
       }
     }
 
@@ -142,7 +171,7 @@
   // Horizontal rules
 
     hr {
-      border: 0;
+      border: none;
       border-top: 1px solid #000000;
       border-bottom: 1px solid #ffffff;
       border-top: 1px solid rgba(0,0,0,0.1);
@@ -172,7 +201,8 @@
       }
 
       &::before {
-        right: 100%;
+        left: (-1 * @ch);
+        left: -1ch;
       }
     }
 
@@ -213,6 +243,7 @@
       code {
         &::before, &::after {
           content: "";
+          content: none;
         }
       }
     }
@@ -245,21 +276,23 @@
     & > h3,
     & > h4,
     & > h5,
-    & > h6,
-    ul > li,
-    ol > li {
+    & > h6 {
       position: relative;
 
       &::before {
         position: absolute;
-        left: auto;
         right: 100%;
       }
     }
 
+    ol > li:nth-child(n) {
+      margin-left: 0;
+    }
+
     & > ul > li,
     & > ol > li {
-      margin-left: 0;
+      left: 0;
+      margin-right: 0;
     }
   }
 }
@@ -281,6 +314,7 @@
     &[href^="#"] {
       &::before, &::after {
         content: "";
+        content: none;
       }
     }
   }
