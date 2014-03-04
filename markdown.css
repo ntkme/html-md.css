@@ -1,4 +1,4 @@
-/*! markdown.css 1.0.1 | BSD License | github.com/ntkme/markdown.css */
+/*! markdown.css v1.1.0 | BSD License | git.io/markdown.css */
 @media all {
   .markdown {
     margin-left: auto;
@@ -75,6 +75,26 @@
   .markdown h6::before {
     content: "######\0000a0";
   }
+  .markdown h2,
+  .markdown h4,
+  .markdown h6 {
+    font-style: italic;
+  }
+  .markdown h2::before,
+  .markdown h4::before,
+  .markdown h6::before {
+    font-style: normal;
+  }
+  .markdown h3,
+  .markdown h4,
+  .markdown h5,
+  .markdown h6 {
+    font-weight: normal;
+  }
+  .markdown h3::before,
+  .markdown h4::before {
+    font-weight: bold;
+  }
   .markdown blockquote {
     position: relative;
     left: 1.2em;
@@ -125,9 +145,9 @@
     content: counter(ol-li) ".\0000a0";
   }
   .markdown ol > li {
-    left: 1.7999999999999998em;
+    left: 1.8em;
     left: 3ch;
-    margin-right: 1.7999999999999998em;
+    margin-right: 1.8em;
     margin-right: 3ch;
   }
   .markdown ol > li:nth-child(n+10) {
@@ -139,7 +159,7 @@
     margin-left: 2ch;
   }
   .markdown ol > li:nth-child(n+1000) {
-    margin-left: 1.7999999999999998em;
+    margin-left: 1.8em;
     margin-left: 3ch;
   }
   .markdown pre {
