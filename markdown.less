@@ -1,5 +1,7 @@
-/*! markdown.css v1.1.0 | BSD License | git.io/markdown.css */
+/*! markdown.css v1.1.1 | BSD License | git.io/markdown.css */
+@markdown-font-family: Cousine;
 @markdown-ch-fallback: unit((3 / 5), em);
+
 @media all {
   @ch: @markdown-ch-fallback;
 
@@ -7,7 +9,7 @@
     margin-left: auto;
     margin-right: auto;
     padding: 0;
-    font-family: Cousine, monospace;
+    font-family: @markdown-font-family, monospace;
     line-height: 1.61803398874989485em;
 
     p,
