@@ -1,4 +1,4 @@
-/*! markdown.css v1.1.1 | BSD License | git.io/markdown.css */
+/*! markdown.css v1.1.2 | BSD License | git.io/markdown.css */
 @media all {
   .markdown {
     margin-left: auto;
@@ -226,6 +226,9 @@
   .markdown code::before,
   .markdown code::after {
     content: "`";
+  }
+  .markdown pre code {
+    word-wrap: normal;
   }
   .markdown pre code::before,
   .markdown pre code::after {

@@ -1,4 +1,4 @@
-/*! markdown.css v1.1.1 | BSD License | git.io/markdown.css */
+/*! markdown.css v1.1.2 | BSD License | git.io/markdown.css */
 @markdown-font-family: Cousine;
 @markdown-ch-fallback: unit((3 / 5), em);
 
@@ -261,6 +261,8 @@
 
     pre {
       code {
+        word-wrap: normal;
+
         &::before, &::after {
           content: "";
           content: none;
