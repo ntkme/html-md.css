@@ -1,9 +1,9 @@
-/*! markdown.css v1.1.2 | BSD License | git.io/markdown.css */
+/*! markdown.css v1.1.3 | BSD License | git.io/markdown.css */
 @media all {
   .markdown {
-    margin-left: auto;
-    margin-right: auto;
     padding: 0;
+    margin-right: auto;
+    margin-left: auto;
     font-family: Cousine, monospace;
     line-height: 1.61803398874989485em;
   }
@@ -20,9 +20,9 @@
   .markdown li,
   .markdown pre,
   .markdown code {
-    font-size: 100%;
-    margin: 0;
     padding: 0;
+    margin: 0;
+    font-size: 100%;
     border: none;
   }
   .markdown h1::before,
@@ -103,9 +103,9 @@
     margin-right: 2ch;
   }
   .markdown blockquote::before {
-    content: ">\0000a0";
     position: absolute;
     right: 100%;
+    content: ">\0000a0";
   }
   .markdown blockquote::after {
     content: "";
@@ -138,11 +138,11 @@
     margin-right: 2ch;
   }
   .markdown ol {
-    counter-reset: ol-li;
+    counter-reset: markdown-ol-li;
   }
   .markdown ol > li::before {
-    counter-increment: ol-li;
-    content: counter(ol-li) ".\0000a0";
+    content: counter(markdown-ol-li) ".\0000a0";
+    counter-increment: markdown-ol-li;
   }
   .markdown ol > li {
     left: 1.8em;
@@ -163,20 +163,20 @@
     margin-left: 3ch;
   }
   .markdown pre {
-    line-height: normal;
-    margin-left: 2.4em;
     margin-right: 2.4em;
-    margin-left: 4ch;
     margin-right: 4ch;
+    margin-left: 2.4em;
+    margin-left: 4ch;
+    line-height: normal;
   }
   .markdown hr {
+    height: 0;
+    clear: both;
     border: none;
     border-top: 1px solid #000000;
-    border-bottom: 1px solid #ffffff;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #ffffff;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    clear: both;
-    height: 0;
   }
   .markdown a {
     text-decoration: none;
@@ -185,10 +185,10 @@
   .markdown em,
   .markdown del {
     position: relative;
-    margin-left: 0.6em;
     margin-right: 0.6em;
-    margin-left: 1ch;
     margin-right: 1ch;
+    margin-left: 0.6em;
+    margin-left: 1ch;
   }
   .markdown em::before,
   .markdown del::before,
@@ -238,10 +238,10 @@
   .markdown img,
   .markdown video {
     display: block;
-    max-width: 100%;
     height: auto;
-    margin-left: auto;
+    max-width: 100%;
     margin-right: auto;
+    margin-left: auto;
   }
 }
 @media screen and (min-height: 35.625em), not screen {
