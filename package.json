@@ -1,0 +1,33 @@
+{
+  "name": "markdown.css",
+  "version": "2.0.0",
+  "description": "HTML as Markdown",
+  "keywords": [
+    "markdown",
+    "css",
+    "scss",
+    "sass"
+  ],
+  "license": "BSD-2-Clause",
+  "homepage": "https://github.com/ntkme/markdown.css",
+  "bugs": {
+    "url": "https://github.com/ntkme/markdown.css/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ntkme/markdown.css.git"
+  },
+  "author": {
+    "name": "なつき",
+    "email": "i@ntk.me",
+    "url": "https://ntk.me/"
+  },
+  "main": "dist/markdown.css",
+  "style": "dist/markdown.css",
+  "scripts": {
+    "build": "node-sass --output-style compressed --output dist scss"
+  },
+  "devDependencies": {
+    "node-sass": "^4.8.3"
+  }
+}

@@ -1,15 +1,15 @@
-/*! markdown.css v1.1.3 | BSD License | git.io/markdown.css */
-@markdown-font-family: Cousine;
-@markdown-ch-fallback: unit((3 / 5), em);
+/*! markdown.css v2.0.0 | BSD License | git.io/markdown.css */
+$markdown-font-family: Cousine !default;
+$markdown-ch-fallback: 3 / 5 * 1em !default;
 
 @media all {
-  @ch: @markdown-ch-fallback;
+  $ch: $markdown-ch-fallback;
 
   .markdown {
     padding: 0;
     margin-right: auto;
     margin-left: auto;
-    font-family: @markdown-font-family, monospace;
+    font-family: $markdown-font-family, monospace;
     line-height: 1.61803398874989485em;
 
     p,
@@ -47,9 +47,9 @@
       margin-bottom: 0;
     }
 
-  // Paragraphs
+    // Paragraphs
 
-  // Headers
+    // Headers
 
     h1::before {
       content: "#\0000a0";
@@ -93,13 +93,13 @@
       }
     }
 
-  // Blockquotes
+    // Blockquotes
 
     blockquote {
       position: relative;
-      left: (2 * @ch);
+      left: (2 * $ch);
       left: 2ch;
-      margin-right: (2 * @ch);
+      margin-right: (2 * $ch);
       margin-right: 2ch;
 
       &::before {
@@ -114,7 +114,7 @@
       }
     }
 
-  // Lists
+    // Lists
 
     ul, ol {
       list-style-type: none;
@@ -140,9 +140,9 @@
       }
 
       & > li {
-        left: (2 * @ch);
+        left: (2 * $ch);
         left: 2ch;
-        margin-right: (2 * @ch);
+        margin-right: (2 * $ch);
         margin-right: 2ch;
       }
     }
@@ -156,39 +156,39 @@
       }
 
       & > li {
-        left: (3 * @ch);
+        left: (3 * $ch);
         left: 3ch;
-        margin-right: (3 * @ch);
+        margin-right: (3 * $ch);
         margin-right: 3ch;
 
         &:nth-child(n+10) {
-          margin-left: (1 * @ch);
+          margin-left: (1 * $ch);
           margin-left: 1ch;
         }
 
         &:nth-child(n+100) {
-          margin-left: (2 * @ch);
+          margin-left: (2 * $ch);
           margin-left: 2ch;
         }
 
         &:nth-child(n+1000) {
-          margin-left: (3 * @ch);
+          margin-left: (3 * $ch);
           margin-left: 3ch;
         }
       }
     }
 
-  // Code Blocks
+    // Code Blocks
 
     pre {
-      margin-right: (4 * @ch);
+      margin-right: (4 * $ch);
       margin-right: 4ch;
-      margin-left: (4 * @ch);
+      margin-left: (4 * $ch);
       margin-left: 4ch;
       line-height: normal;
     }
 
-  // Horizontal rules
+    // Horizontal rules
 
     hr {
       height: 0;
@@ -200,20 +200,20 @@
       border-bottom: 1px solid rgba(255,255,255,0.3);
     }
 
-  // Links
+    // Links
 
     a {
       text-decoration: none;
       border-bottom: 1px dashed;
     }
 
-  // Emphasis
+    // Emphasis
 
     em, del {
       position: relative;
-      margin-right: (1 * @ch);
+      margin-right: (1 * $ch);
       margin-right: 1ch;
-      margin-left: (1 * @ch);
+      margin-left: (1 * $ch);
       margin-left: 1ch;
 
       &::before, &::after {
@@ -221,7 +221,7 @@
       }
 
       &::before {
-        left: (-1 * @ch);
+        left: (-1 * $ch);
         left: -1ch;
       }
     }
@@ -249,7 +249,7 @@
       }
     }
 
-  // Inline codes
+    // Inline codes
 
     code {
       word-wrap: break-word;
@@ -270,7 +270,7 @@
       }
     }
 
-  // Image & Video
+    // Image & Video
 
     img, video {
       display: block;
@@ -287,10 +287,10 @@
   }
 }
 @media screen and (min-width: 62em), not screen {
-  @ch: @markdown-ch-fallback;
+  $ch: $markdown-ch-fallback;
 
   .markdown {
-    padding: 0 (8 * @ch);
+    padding: 0 (8 * $ch);
     padding: 0 8ch;
 
     & > h1,
