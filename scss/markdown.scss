@@ -1,4 +1,4 @@
-/*! markdown.css v2.0.0 | BSD License | git.io/markdown.css */
+/*! markdown.css v2.1.0 | BSD License | git.io/markdown.css */
 $markdown-font-family: Cousine !default;
 $markdown-ch-fallback: 3 / 5 * 1em !default;
 
@@ -35,7 +35,8 @@ $markdown-ch-fallback: 3 / 5 * 1em !default;
     h1, h2, h3, h4, h5, h6,
     blockquote,
     ul, ol,
-    pre,
+    & > pre,
+    blockquote > pre,
     hr,
     img, video {
       margin-top: 1em;
@@ -181,11 +182,15 @@ $markdown-ch-fallback: 3 / 5 * 1em !default;
     // Code Blocks
 
     pre {
+      line-height: normal;
+    }
+
+    & > pre,
+    blockquote > pre {
       margin-right: (4 * $ch);
       margin-right: 4ch;
       margin-left: (4 * $ch);
       margin-left: 4ch;
-      line-height: normal;
     }
 
     // Horizontal rules
