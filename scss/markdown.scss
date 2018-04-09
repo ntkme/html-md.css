@@ -1,4 +1,10 @@
-/*! markdown.css v2.1.0 | BSD License | git.io/markdown.css */
+/*!
+ * markdown.css v2.1.1 (https://git.io/markdown.css)
+ * Copyright (c) 2018 なつき.
+ * Licensed under BSD-2-Clause (https://github.com/ntkme/markdown.css/blob/master/LICENSE)
+ */
+
+// stylelint-disable value-keyword-case
 $markdown-font-family: Cousine !default;
 $markdown-ch-fallback: 3 / 5 * 1em !default;
 
@@ -13,17 +19,30 @@ $markdown-ch-fallback: 3 / 5 * 1em !default;
     line-height: 1.61803398874989485em;
 
     p,
-    h1, h2, h3, h4, h5, h6,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
     blockquote,
-    ul, ol, li,
-    pre, code {
+    ul,
+    ol,
+    li,
+    pre,
+    code {
       padding: 0;
       margin: 0;
       font-size: 100%;
       border: none;
     }
 
-    h1, h2, h3, h4, h5, h6,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
     blockquote,
     li {
       &::before {
@@ -32,18 +51,26 @@ $markdown-ch-fallback: 3 / 5 * 1em !default;
     }
 
     p,
-    h1, h2, h3, h4, h5, h6,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
     blockquote,
-    ul, ol,
+    ul,
+    ol,
     & > pre,
     blockquote > pre,
     hr,
-    img, video {
+    img,
+    video {
       margin-top: 1em;
       margin-bottom: 1em;
     }
 
-    li > ol, li > ul {
+    li > ol,
+    li > ul {
       margin-top: 0;
       margin-bottom: 0;
     }
@@ -76,7 +103,9 @@ $markdown-ch-fallback: 3 / 5 * 1em !default;
       content: "######\0000a0";
     }
 
-    h2, h4, h6 {
+    h2,
+    h4,
+    h6 {
       font-style: italic;
 
       &::before {
@@ -84,13 +113,17 @@ $markdown-ch-fallback: 3 / 5 * 1em !default;
       }
     }
 
-    h3, h4, h5, h6 {
-      font-weight: normal;
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: 400;
     }
 
-    h3, h4 {
+    h3,
+    h4 {
       &::before {
-        font-weight: bold;
+        font-weight: 700;
       }
     }
 
@@ -117,7 +150,8 @@ $markdown-ch-fallback: 3 / 5 * 1em !default;
 
     // Lists
 
-    ul, ol {
+    ul,
+    ol {
       list-style-type: none;
 
       & > li {
@@ -131,11 +165,6 @@ $markdown-ch-fallback: 3 / 5 * 1em !default;
     }
 
     ul {
-      &.bulleted > li::before {
-        content: "*\0000a0";
-      }
-
-      &.dashed > li::before,
       & > li::before {
         content: "\002013\0000a0";
       }
@@ -179,30 +208,16 @@ $markdown-ch-fallback: 3 / 5 * 1em !default;
       }
     }
 
-    // Code Blocks
-
-    pre {
-      line-height: normal;
-    }
-
-    & > pre,
-    blockquote > pre {
-      margin-right: (4 * $ch);
-      margin-right: 4ch;
-      margin-left: (4 * $ch);
-      margin-left: 4ch;
-    }
-
     // Horizontal rules
 
     hr {
       height: 0;
       clear: both;
       border: none;
-      border-top: 1px solid #000000;
-      border-top: 1px solid rgba(0,0,0,0.1);
-      border-bottom: 1px solid #ffffff;
-      border-bottom: 1px solid rgba(255,255,255,0.3);
+      border-top: 1px solid #000;
+      border-top: 1px solid rgba(0, 0, 0, .1);
+      border-bottom: 1px solid #fff;
+      border-bottom: 1px solid rgba(255, 255, 255, .3);
     }
 
     // Links
@@ -214,14 +229,16 @@ $markdown-ch-fallback: 3 / 5 * 1em !default;
 
     // Emphasis
 
-    em, del {
+    em,
+    del {
       position: relative;
       margin-right: (1 * $ch);
       margin-right: 1ch;
       margin-left: (1 * $ch);
       margin-left: 1ch;
 
-      &::before, &::after {
+      &::before,
+      &::after {
         position: absolute;
       }
 
@@ -235,21 +252,24 @@ $markdown-ch-fallback: 3 / 5 * 1em !default;
       font-style: normal;
       border-bottom: 1px solid;
 
-      &::before, &::after {
+      &::before,
+      &::after {
         content: "_";
       }
     }
 
     del {
-      &::before, &::after {
+      &::before,
+      &::after {
         content: "-";
       }
     }
 
     strong {
-      font-weight: bold;
+      font-weight: 700;
 
-      &::before, &::after {
+      &::before,
+      &::after {
         content: "**";
       }
     }
@@ -259,38 +279,55 @@ $markdown-ch-fallback: 3 / 5 * 1em !default;
     code {
       word-wrap: break-word;
 
-      &::before, &::after {
+      &::before,
+      &::after {
         content: "`";
       }
     }
 
+    // Code Blocks
+
     pre {
+      line-height: normal;
+
       code {
         word-wrap: normal;
 
-        &::before, &::after {
+        &::before,
+        &::after {
           content: "";
           content: none;
         }
       }
     }
 
+    & > pre,
+    blockquote > pre {
+      margin-right: (4 * $ch);
+      margin-right: 4ch;
+      margin-left: (4 * $ch);
+      margin-left: 4ch;
+    }
+
     // Image & Video
 
-    img, video {
+    img,
+    video {
       display: block;
-      height: auto;
       max-width: 100%;
+      height: auto;
       margin-right: auto;
       margin-left: auto;
     }
   }
 }
+
 @media screen and (min-height: 35.625em), not screen {
   .markdown {
     line-height: 2em;
   }
 }
+
 @media screen and (min-width: 62em), not screen {
   $ch: $markdown-ch-fallback;
 
@@ -323,25 +360,29 @@ $markdown-ch-fallback: 3 / 5 * 1em !default;
     }
   }
 }
+
 @media print {
-  .markdown a {
-    border: none;
+  .markdown {
+    a {
+      border: none;
 
-    &[href] {
-      &::before {
-        content: "[";
+      &[href] {
+        &::before {
+          content: "[";
+        }
+        &::after {
+          content: "](" attr(href) ")";
+        }
       }
-      &::after {
-        content: "](" attr(href) ")";
-      }
-    }
 
-    &[href^="data:"],
-    &[href^="javascript:"],
-    &[href^="#"] {
-      &::before, &::after {
-        content: "";
-        content: none;
+      &[href^="data:"],
+      &[href^="javascript:"],
+      &[href^="#"] {
+        &::before,
+        &::after {
+          content: "";
+          content: none;
+        }
       }
     }
   }
