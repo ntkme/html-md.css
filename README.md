@@ -7,7 +7,6 @@ Usage
 -----
 
 ``` html
-<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Cousine:400,700">
 <link rel="stylesheet" type="text/css" href="markdown.css">
 ```
 

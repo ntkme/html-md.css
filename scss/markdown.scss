@@ -1,11 +1,11 @@
 /*!
- * markdown.css v2.1.1 (https://git.io/markdown.css)
+ * markdown.css v2.2.0 (https://git.io/markdown.css)
  * Copyright (c) 2018 なつき.
  * Licensed under BSD-2-Clause (https://github.com/ntkme/markdown.css/blob/master/LICENSE)
  */
 
 // stylelint-disable value-keyword-case
-$markdown-font-family: Cousine !default;
+$markdown-font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $markdown-ch-fallback: 3 / 5 * 1em !default;
 
 @media all {
