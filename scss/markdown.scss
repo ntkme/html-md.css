@@ -1,11 +1,16 @@
 /*!
- * markdown.css v2.2.0 (https://git.io/markdown.css)
+ * markdown.css v2.2.1 (https://git.io/markdown.css)
  * Copyright (c) 2018 なつき.
  * Licensed under BSD-2-Clause (https://github.com/ntkme/markdown.css/blob/master/LICENSE)
  */
 
 // stylelint-disable value-keyword-case
 $markdown-font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+// stylelint-enable value-keyword-case
+
+$markdown-font-weight-normal: 400 !default;
+$markdown-font-weight-bold: 700 !default;
+
 $markdown-ch-fallback: 3 / 5 * 1em !default;
 
 @media all {
@@ -15,7 +20,8 @@ $markdown-ch-fallback: 3 / 5 * 1em !default;
     padding: 0;
     margin-right: auto;
     margin-left: auto;
-    font-family: $markdown-font-family, monospace;
+    font-family: $markdown-font-family;
+    font-weight: $markdown-font-weight-normal;
     line-height: 1.61803398874989485em;
 
     p,
@@ -103,6 +109,20 @@ $markdown-ch-fallback: 3 / 5 * 1em !default;
       content: "######\0000a0";
     }
 
+    h1,
+    h2,
+    h3::before,
+    h4::before {
+      font-weight: $markdown-font-weight-bold;
+    }
+
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: $markdown-font-weight-normal;
+    }
+
     h2,
     h4,
     h6 {
@@ -110,20 +130,6 @@ $markdown-ch-fallback: 3 / 5 * 1em !default;
 
       &::before {
         font-style: normal;
-      }
-    }
-
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-weight: 400;
-    }
-
-    h3,
-    h4 {
-      &::before {
-        font-weight: 700;
       }
     }
 
@@ -266,7 +272,7 @@ $markdown-ch-fallback: 3 / 5 * 1em !default;
     }
 
     strong {
-      font-weight: 700;
+      font-weight: $markdown-font-weight-bold;
 
       &::before,
       &::after {
