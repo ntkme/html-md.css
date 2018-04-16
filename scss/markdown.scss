@@ -1,5 +1,5 @@
 /*!
- * markdown.css v2.3.0 (https://git.io/markdown.css)
+ * markdown.css v2.3.1 (https://git.io/markdown.css)
  * Copyright (c) 2018 なつき.
  * Licensed under BSD-2-Clause (https://github.com/ntkme/markdown.css/blob/master/LICENSE)
  */
@@ -86,27 +86,27 @@ $markdown-ch-fallback: 3 / 5 * 1em !default;
     // Headers
 
     h1::before {
-      content: "#\0000a0";
+      content: "#\2007";
     }
 
     h2::before {
-      content: "##\0000a0";
+      content: "##\2007";
     }
 
     h3::before {
-      content: "###\0000a0";
+      content: "###\2007";
     }
 
     h4::before {
-      content: "####\0000a0";
+      content: "####\2007";
     }
 
     h5::before {
-      content: "#####\0000a0";
+      content: "#####\2007";
     }
 
     h6::before {
-      content: "######\0000a0";
+      content: "######\2007";
     }
 
     h1,
@@ -145,7 +145,7 @@ $markdown-ch-fallback: 3 / 5 * 1em !default;
       &::before {
         position: absolute;
         right: 100%;
-        content: ">\0000a0";
+        content: "\203a\2007";
       }
 
       &::after {
@@ -172,7 +172,7 @@ $markdown-ch-fallback: 3 / 5 * 1em !default;
 
     ul {
       & > li::before {
-        content: "\002013\0000a0";
+        content: "\2013\2007";
       }
 
       & > li {
@@ -187,7 +187,7 @@ $markdown-ch-fallback: 3 / 5 * 1em !default;
       counter-reset: markdown-ol-li;
 
       & > li::before {
-        content: counter(markdown-ol-li) ".\0000a0";
+        content: counter(markdown-ol-li) ".\2007";
         counter-increment: markdown-ol-li;
       }
 
@@ -234,10 +234,6 @@ $markdown-ch-fallback: 3 / 5 * 1em !default;
     em,
     del {
       position: relative;
-      margin-right: 1 * $ch;
-      margin-right: 1ch;
-      margin-left: 1 * $ch;
-      margin-left: 1ch;
 
       &::before,
       &::after {
@@ -250,18 +246,27 @@ $markdown-ch-fallback: 3 / 5 * 1em !default;
     }
 
     em {
+      margin-right: 1 * $ch;
+      margin-right: 1ch;
+      margin-left: 1 * $ch;
+      margin-left: 1ch;
       border-bottom: 1px solid;
 
       &::before,
       &::after {
-        content: "_";
+        content: "\2007\0331";
       }
     }
 
     del {
+      margin-right: 2 * $ch;
+      margin-right: 2ch;
+      margin-left: 2 * $ch;
+      margin-left: 2ch;
+
       &::before,
       &::after {
-        content: "-";
+        content: "\2007\0334\2007\0334";
       }
     }
 
