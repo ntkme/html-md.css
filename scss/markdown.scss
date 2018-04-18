@@ -1,5 +1,5 @@
 /*!
- * markdown.css v2.3.1 (https://git.io/markdown.css)
+ * markdown.css v2.4.0 (https://git.io/markdown.css)
  * Copyright (c) 2018 なつき.
  * Licensed under BSD-2-Clause (https://github.com/ntkme/markdown.css/blob/master/LICENSE)
  */
@@ -223,11 +223,6 @@ $markdown-ch-fallback: 3 / 5 * 1em !default;
     }
 
     // Links
-
-    a {
-      text-decoration: none;
-      border-bottom: 1px dotted;
-    }
 
     // Emphasis
 
