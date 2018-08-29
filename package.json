@@ -1,6 +1,6 @@
 {
   "name": "markdown.css",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "description": "HTML as Markdown",
   "keywords": [
     "markdown",
@@ -28,6 +28,6 @@
     "build": "node-sass --output-style compressed --output dist scss"
   },
   "devDependencies": {
-    "node-sass": "^4.8.3"
+    "node-sass": "^4.9.3"
   }
 }
