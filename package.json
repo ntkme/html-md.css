@@ -25,9 +25,9 @@
   "main": "dist/markdown.css",
   "style": "dist/markdown.css",
   "scripts": {
-    "build": "node-sass --output-style compressed --output dist scss"
+    "build": "sass --style compressed --no-source-map -- scss:dist"
   },
   "devDependencies": {
-    "node-sass": "^4.12.0"
+    "sass": "^1.24.0"
   }
 }
