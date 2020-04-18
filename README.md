@@ -1,17 +1,19 @@
-markdown.css
-============
+html-md.css
+===========
 
-Render markdown converted html like markdown.
+[![npm](https://img.shields.io/npm/v/html-md.css)](https://www.npmjs.com/html-md.css)
+
+HTML as Markdown.
 
 Usage
 -----
 
 ``` html
-<link rel="stylesheet" type="text/css" href="markdown.css">
+<link rel="stylesheet" href="https://unpkg.com/html-md.css@2.5.0/dist/html-md.css" crossorigin="anonymous">
 ```
 
 ``` html
-<div class="markdown">{{ content }}</div>
+<div class="html-md">{{ content }}</div>
 ```
 
 License

@@ -1,27 +1,27 @@
 /*!
- * markdown.css v2.4.3 (https://git.io/markdown.css)
- * Copyright (c) 2018 なつき.
- * Licensed under BSD-2-Clause (https://github.com/ntkme/markdown.css/blob/master/LICENSE)
+ * html-md.css v2.5.0 (https://github.com/ntkme/html-md.css)
+ * Copyright (c) 2020 なつき.
+ * Licensed under BSD-2-Clause (https://github.com/ntkme/html-md.css/blob/master/LICENSE)
  */
 
 // stylelint-disable value-keyword-case
-$markdown-font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$html-md-font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
 
-$markdown-font-weight-normal: 400 !default;
-$markdown-font-weight-bold: 700 !default;
+$html-md-font-weight-normal: 400 !default;
+$html-md-font-weight-bold: 700 !default;
 
-$markdown-ch-fallback: 3 / 5 * 1em !default;
+$html-md-ch-fallback: 3 / 5 * 1em !default;
 
 @media all {
-  $ch: $markdown-ch-fallback;
+  $ch: $html-md-ch-fallback;
 
-  .markdown {
+  .html-md {
     padding: 0;
     margin-right: auto;
     margin-left: auto;
-    font-family: $markdown-font-family;
-    font-weight: $markdown-font-weight-normal;
+    font-family: $html-md-font-family;
+    font-weight: $html-md-font-weight-normal;
     line-height: 1.6180339887em;
 
     p,
@@ -113,14 +113,14 @@ $markdown-ch-fallback: 3 / 5 * 1em !default;
     h2,
     h3::before,
     h4::before {
-      font-weight: $markdown-font-weight-bold;
+      font-weight: $html-md-font-weight-bold;
     }
 
     h3,
     h4,
     h5,
     h6 {
-      font-weight: $markdown-font-weight-normal;
+      font-weight: $html-md-font-weight-normal;
     }
 
     h2,
@@ -184,11 +184,11 @@ $markdown-ch-fallback: 3 / 5 * 1em !default;
     }
 
     ol {
-      counter-reset: markdown-ol-li;
+      counter-reset: html-md-ol-li;
 
       & > li::before {
-        content: counter(markdown-ol-li) ".\2007";
-        counter-increment: markdown-ol-li;
+        content: counter(html-md-ol-li) ".\2007";
+        counter-increment: html-md-ol-li;
       }
 
       & > li {
@@ -266,7 +266,7 @@ $markdown-ch-fallback: 3 / 5 * 1em !default;
     }
 
     strong {
-      font-weight: $markdown-font-weight-bold;
+      font-weight: $html-md-font-weight-bold;
 
       &::before,
       &::after {
@@ -323,15 +323,15 @@ $markdown-ch-fallback: 3 / 5 * 1em !default;
 }
 
 @media screen and (min-height: 36em), not screen {
-  .markdown {
+  .html-md {
     line-height: 2em;
   }
 }
 
 @media screen and (min-width: 62em), not screen {
-  $ch: $markdown-ch-fallback;
+  $ch: $html-md-ch-fallback;
 
-  .markdown {
+  .html-md {
     padding: 0 8 * $ch;
     padding: 0 8ch;
 
@@ -362,7 +362,7 @@ $markdown-ch-fallback: 3 / 5 * 1em !default;
 }
 
 @media print {
-  .markdown {
+  .html-md {
     a {
       border: none;
 

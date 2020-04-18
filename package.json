@@ -1,6 +1,6 @@
 {
-  "name": "markdown.css",
-  "version": "2.4.3",
+  "name": "html-md.css",
+  "version": "2.5.0",
   "description": "HTML as Markdown",
   "keywords": [
     "markdown",
@@ -9,25 +9,25 @@
     "sass"
   ],
   "license": "BSD-2-Clause",
-  "homepage": "https://github.com/ntkme/markdown.css",
+  "homepage": "https://github.com/ntkme/html-md.css",
   "bugs": {
-    "url": "https://github.com/ntkme/markdown.css/issues"
+    "url": "https://github.com/ntkme/html-md.css/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ntkme/markdown.css.git"
+    "url": "https://github.com/ntkme/html-md.css.git"
   },
   "author": {
     "name": "なつき",
     "email": "i@ntk.me",
     "url": "https://ntk.me/"
   },
-  "main": "dist/markdown.css",
-  "style": "dist/markdown.css",
+  "main": "dist/html-md.css",
+  "style": "dist/html-md.css",
   "scripts": {
     "build": "sass --style compressed --no-source-map -- scss:dist"
   },
   "devDependencies": {
-    "sass": "^1.24.0"
+    "sass": "^1.26.3"
   }
 }
