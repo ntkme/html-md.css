@@ -1,0 +1,8 @@
+@mixin overflow-pseudo-element-before {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    right: 100%;
+  }
+}
