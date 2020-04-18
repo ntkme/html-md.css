@@ -9,7 +9,7 @@ Usage
 -----
 
 ``` html
-<link rel="stylesheet" href="https://unpkg.com/html-md.css@3.0.0/dist/html-md.css" integrity="sha384-DJQnz+pdiayvnbp0Idbo9qIYroVfiDasEHtlD8rSbNclbGUREU8ju/YQ1NMq7Fdp" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/html-md.css@3.0.1/dist/html-md.css" integrity="sha384-wpcmhdpajXfIktZMzEDBVH7ZCARgQajgr6saAErgd7v1eJE3YWKJOorA4J7E4dqx" crossorigin="anonymous">
 ```
 
 ``` html

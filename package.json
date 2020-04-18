@@ -1,6 +1,6 @@
 {
   "name": "html-md.css",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "HTML as Markdown",
   "keywords": [
     "markdown",
@@ -25,7 +25,7 @@
   "main": "dist/html-md.css",
   "style": "dist/html-md.css",
   "scripts": {
-    "build": "sass --style compressed --no-source-map -- scss:dist"
+    "build": "sass --style compressed -- scss:dist"
   },
   "devDependencies": {
     "sass": "^1.26.3"
