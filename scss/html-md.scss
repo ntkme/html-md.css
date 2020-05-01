@@ -1,18 +1,20 @@
 /*!
- * html-md.css v3.0.1 (https://github.com/ntkme/html-md.css)
- * Copyright (c) 2020 なつき.
- * Licensed under BSD-2-Clause (https://github.com/ntkme/html-md.css/blob/master/LICENSE)
+ * html-md.css v4.0.0 (https://github.com/ntkme/html-md.css)
+ * Copyright (c) 2020 なつき
+ * Licensed under BSD-2-Clause
  */
 
-@import './variables';
-@import './mixins';
+$selector: ".html-md" !default;
+$font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
 
-#{$html-md-selector} {
+#{$selector} {
   padding: 0;
   margin-right: auto;
   margin-left: auto;
-  font-family: $html-md-font-family;
-  font-weight: $html-md-font-weight-normal;
+  font-family: $font-family;
+  font-weight: $font-weight-normal;
   line-height: 1.6180339887em;
 
   p,
@@ -103,14 +105,14 @@
   h2,
   h3::before,
   h4::before {
-    font-weight: $html-md-font-weight-bold;
+    font-weight: $font-weight-bold;
   }
 
   h3,
   h4,
   h5,
   h6 {
-    font-weight: $html-md-font-weight-normal;
+    font-weight: $font-weight-normal;
   }
 
   h2,
@@ -127,7 +129,12 @@
 
   blockquote,
   li {
-    @include overflow-pseudo-element-before;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      right: 100%;
+    }
   }
 
   // Blockquotes
@@ -224,7 +231,7 @@
   }
 
   strong {
-    font-weight: $html-md-font-weight-bold;
+    font-weight: $font-weight-bold;
 
     &::before,
     &::after {
@@ -288,7 +295,12 @@
     & > h4,
     & > h5,
     & > h6 {
-      @include overflow-pseudo-element-before;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        right: 100%;
+      }
     }
 
     ol > li::nth-child(n) {
