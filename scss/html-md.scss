@@ -1,6 +1,6 @@
 /*!
  * html-md.css v4.0.0 (https://github.com/ntkme/html-md.css)
- * Copyright (c) 2020 なつき
+ * Copyright (c) 2021 なつき
  * Licensed under BSD-2-Clause
  */
 
@@ -246,7 +246,7 @@ $font-weight-bold: 700 !default;
 
     &::before,
     &::after {
-      content: "`";
+      content: "\02cb";
     }
   }
 
