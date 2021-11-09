@@ -224,6 +224,8 @@ $font-weight-bold: 700 !default;
   }
 
   del {
+    opacity: 0.25;
+
     &::before,
     &::after {
       content: "~~";
