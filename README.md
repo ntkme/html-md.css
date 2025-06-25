@@ -1,6 +1,7 @@
 html-md.css
 ===========
 
+[![build](https://github.com/ntkme/html-md.css/actions/workflows/build.yml/badge.svg)](https://github.com/ntkme/html-md.css/actions/workflows/build.yml)
 [![npm](https://img.shields.io/npm/v/html-md.css)](https://www.npmjs.com/html-md.css)
 
 HTML as Markdown.
@@ -9,7 +10,7 @@ Usage
 -----
 
 ``` html
-<link rel="stylesheet" href="https://unpkg.com/html-md.css@4.2.0/dist/html-md.css" integrity="sha384-7K4TdmbL9XBaKtH6LrCmL2J/zbupUslW32JvMAzo5Ol1mrJgG5IjuoJ0ENBs/IW/" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/html-md.css@5.0.0/dist/html-md.css" integrity="sha384-vXzS8BQ3WH2YhHL+N/NaWNmGNAGPHE+reEsCif8/KXSY9s6JtGrfJD2FA8k5XxvN" crossorigin="anonymous">
 ```
 
 ``` html
