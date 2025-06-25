@@ -28,6 +28,6 @@
     "build": "sass --style compressed -- scss:dist"
   },
   "devDependencies": {
-    "sass": "^1.49.0"
+    "sass": "^1.89.2"
   }
 }

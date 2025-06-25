@@ -1,6 +1,6 @@
 /*!
  * html-md.css v4.2.0 (https://github.com/ntkme/html-md.css)
- * Copyright (c) 2021 なつき
+ * Copyright (c) 2025 なつき
  * Licensed under BSD-2-Clause
  */
 
@@ -159,37 +159,32 @@ $font-weight-bold: 700 !default;
   }
 
   ul {
+    padding-left: 2ch;
+
     & > li::before {
       content: "\2012\2007";
-    }
-
-    & > li {
-      margin-left: 2ch;
     }
   }
 
   ol {
+    padding-left: 3ch;
     counter-reset: html-md-ol-li;
+
+    &:has(> li:nth-child(10)) {
+      padding-left: 4ch;
+    }
+
+    &:has(> li:nth-child(100)) {
+      padding-left: 5ch;
+    }
+
+    &:has(> li:nth-child(1000)) {
+      padding-left: 6ch;
+    }
 
     & > li::before {
       content: counter(html-md-ol-li) ".\2007";
       counter-increment: html-md-ol-li;
-    }
-
-    & > li {
-      margin-left: 3ch;
-
-      &:nth-child(n+10) {
-        margin-left: 4ch;
-      }
-
-      &:nth-child(n+100) {
-        margin-left: 5ch;
-      }
-
-      &:nth-child(n+1000) {
-        margin-left: 6ch;
-      }
     }
   }
 
@@ -305,13 +300,10 @@ $font-weight-bold: 700 !default;
       }
     }
 
-    ol > li::nth-child(n) {
-      margin-left: 3ch;
-    }
-
-    & > ul > li,
-    & > ol > li:nth-child(n) {
-      margin-left: 0;
+    & > ul,
+    & > ol,
+    & > ol:has(> li:nth-child(n)) {
+      padding-left: 0;
     }
   }
 
