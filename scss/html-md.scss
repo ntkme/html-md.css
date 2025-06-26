@@ -266,6 +266,19 @@ $font-weight-bold: 700 !default;
   blockquote > pre {
     margin-right: 4ch;
     margin-left: 4ch;
+
+    &:has(> code:only-child) {
+      margin-right: 0ch;
+      margin-left: 0ch;
+    }
+
+    > code:only-child {
+      &::before,
+      &::after {
+        display: block;
+        content: "```";
+      }
+    }
   }
 
   // Image & Video
