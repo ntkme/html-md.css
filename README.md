@@ -10,7 +10,7 @@ Usage
 -----
 
 ``` html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/html-md.css@5.0.0/dist/html-md.css" integrity="sha384-vXzS8BQ3WH2YhHL+N/NaWNmGNAGPHE+reEsCif8/KXSY9s6JtGrfJD2FA8k5XxvN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/html-md.css@5.1.0/dist/html-md.css" integrity="sha384-9ZuVA46+Q8NyyDOomQSFl0hIrInOLFxPfvwggZGKXhcCc1fX5Zf7RYIVgTOFrn/J" crossorigin="anonymous">
 ```
 
 ``` html
